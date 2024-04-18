@@ -43,7 +43,7 @@ const Head = () => {
                         <p className='label'>
                             Token Overview
                         </p>
-                        <div className='details'>
+                        <div className='details  x'>
                             <p>
                                 SolanaIsKing ($SIK) a meme token on solana to celebrate solana as the best blockchain ever and as the king of all blockchain, with unparalleled supremacy.
                             </p>
