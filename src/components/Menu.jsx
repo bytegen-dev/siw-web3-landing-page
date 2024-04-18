@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaDiscord, FaGithub, FaTelegramPlane, FaTwitter } from 'react-icons/fa';
 import { IoClose, IoOpenOutline } from "react-icons/io5";
+import { NavLink } from 'react-router-dom';
 
 const Menu = ({appState, setAppState}) => {
     const closeMenu = ()=>{
@@ -32,11 +33,11 @@ const Menu = ({appState, setAppState}) => {
                 <div className='links'>
                     {links?.map((link, index)=>{
                         return (
-                            <button className='menu-btn' key={index} style={{
+                            <NavLink to={link?.to} className='menu-btn' key={index} style={{
                                 transitionDelay: appState?.showMenu ? `${(index * 0.2)}s` : "0s"
                             }} onClick={closeMenu}>
                                 {link?.title}
-                            </button>
+                            </NavLink>
                         )
                     })}
                 </div>

@@ -5,6 +5,10 @@ import Menu from './components/Menu'
 import Head from './sections/Head'
 import Tokenomics from './sections/Tokenomics'
 import Footer from './components/Footer'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import AboutUs from './pages/AboutUs'
+import PageInDevelopment from './pages/PageInDevelopment'
 
 function App() {
   const [appState, setAppState] = useState({
@@ -13,15 +17,19 @@ function App() {
     links: [
       {
           title: "SIK Art",
+          to: "/sik-art"
       },
       {
           title: "About Us",
+          to: "/about",
       },
       {
           title: "Key Project",
+          to: "/key-projects"
       },
       {
           title: "Whitepaper",
+          to: "/whitepaper"
       },
     ],
   })
@@ -62,11 +70,10 @@ function App() {
 
         <Menu appState={appState} setAppState={setAppState} />
 
-        <div className='container'>
-          <Head />
-          <Tokenomics />
-          <Footer />
-        </div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/*' element={<PageInDevelopment />} />
+        </Routes>
       </div>
     </>
   )

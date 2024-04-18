@@ -3,6 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import { IoOpenOutline } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
 import logoImg from "../assets/logo.png"
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = ({appState, setAppState}) => {
     const links = appState?.links
@@ -18,15 +19,15 @@ const Header = ({appState, setAppState}) => {
     <>
         <header className='header'>
             <div className='nav-bar'>
-                <div className='logo'>
+                <Link className='logo' to={"/"}>
                     <img src={logoImg} width={50} alt='' />
-                </div>
+                </Link>
                 <div className='links-holder'>
                     {links?.map((link, index)=>{
                         return (
-                            <button className='header-btn' key={index}>
+                            <NavLink className='header-btn' key={index} to={link.to}>
                                 {link?.title}
-                            </button>
+                            </NavLink>
                         )
                     })}
                 </div>

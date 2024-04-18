@@ -26,6 +26,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -182,6 +183,17 @@ button{
         }
     }
 
+    h3{
+        font-size: 40px;
+        letter-spacing: 5px;
+        margin-bottom: 70px;
+        text-align: center;
+
+        @media screen and (max-width: 700px) {
+            font-size: 30px;
+        }
+    }
+
     .container{
         width: 100%;
         display: flex;
@@ -193,6 +205,14 @@ button{
         padding: 140px 30px;
         padding-bottom: 0px !important;
         height: max-content;
+
+        &.full-h{
+            min-height: 100vh;
+        }
+
+        &.centered{
+            justify-content: center;
+        }
         
         @media screen and (max-width: 800px) {
             padding: 120px 30px;
@@ -709,10 +729,15 @@ canvas{
                 justify-content: center;
                 align-items: center;
                 border-radius: 7px;
+                transition: all 0.5s ease;
 
+                &.active{
+                    transform: scale(1.05);
+                }
+                
                 &:hover, &:focus{
                     background-color: darken(#FFD549B2, 10.4);
-                    // border: 1px solid #fff2;
+                    transform: scale(1.05);
                 }
             }
 
@@ -950,6 +975,13 @@ canvas{
                 cursor: pointer;
                 opacity: 0;
                 transform: translateX(150px);
+
+                &.active{
+                    background-image: linear-gradient(#34EF9D, #FFD549, #9849FB);
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
 
                 &:hover, &:focus{
                     transition-delay: 0s !important;
