@@ -293,21 +293,26 @@ button{
                         bottom: -30px;
                         
                         @media screen and (max-width: 500px) {
+                            bottom: -20px;
                             right: -20px;
                             width: 60px;
+                            
+                            &.x{
+                                bottom: -50px !important;
+                            }
                         }
                         
                         @media screen and (max-width: 400px) {
                             // right: -15px;
                             bottom: -40px;
-                            bottom: -30px;
+                            bottom: -40px;
                             width: 55px;
                         }
                     }
                 }
 
                 .summary{
-                    margin-top: 30px;
+                    margin-top: 30px !important;
                     text-align: center;
                     margin-bottom: 40px;
                     

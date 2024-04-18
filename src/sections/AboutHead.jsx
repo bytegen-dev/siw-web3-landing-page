@@ -13,7 +13,7 @@ const AboutHead = () => {
                     SOLANA IS KING
                     </p>
                 </h1>
-                <img src={logoImg} alt='' width={70} />
+                <img src={logoImg} className='x' alt='' width={70} />
             </div>
 
             <div className='summary' style={{
