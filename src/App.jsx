@@ -82,6 +82,16 @@ function App() {
     if(appElementRef){
       appElementRef?.current?.scrollTo(0, 0)
     }
+
+    if(pathname === ""){
+      document.title = "Home | SOLANA IS KING"
+    } else if(pathname === "/"){
+      document.title = "Home | SOLANA IS KING"
+    } else if(pathname === "/about"){
+      document.title = "About | SOLANA IS KING"
+    } else{
+      document.title = "SOLANA IS KING"
+    }
   },[pathname])
 
   return (
