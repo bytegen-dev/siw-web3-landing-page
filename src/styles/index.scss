@@ -186,11 +186,15 @@ button{
     h3{
         font-size: 40px;
         letter-spacing: 5px;
-        margin-bottom: 70px;
+        margin-bottom: 100px;
         text-align: center;
 
         @media screen and (max-width: 700px) {
             font-size: 30px;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 25px;
         }
     }
 
@@ -971,7 +975,7 @@ canvas{
                 border: none;
                 font-size: 40px;
                 font-weight: 300;
-                transition: all 1s ease;
+                transition: all 0.7s ease;
                 cursor: pointer;
                 opacity: 0;
                 transform: translateX(150px);
