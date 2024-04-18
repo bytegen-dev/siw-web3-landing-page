@@ -76,13 +76,21 @@ function App() {
       localStorage?.setItem("has-visited", true)
       setShowPreloader(true)
     }
-  },[appElementRef])
 
+  },[appElementRef])
+  
   useLayoutEffect(()=>{
     if(appElementRef){
       appElementRef?.current?.scrollTo(0, 0)
     }
 
+    const el = document?.getElementById("logo-btn")
+    if(el){
+      el.addEventListener("click", ()=>{
+        appElementRef?.current?.scrollTo(0, 0)
+      })
+    }
+    
     if(pathname === ""){
       document.title = "Home | SOLANA IS KING"
     } else if(pathname === "/"){
@@ -92,7 +100,7 @@ function App() {
     } else{
       document.title = "SOLANA IS KING"
     }
-  },[pathname])
+  },[pathname, appElementRef])
 
   return (
     <>

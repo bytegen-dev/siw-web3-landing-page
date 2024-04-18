@@ -19,7 +19,7 @@ const Header = ({appState, setAppState}) => {
     <>
         <header className='header'>
             <div className='nav-bar'>
-                <Link className='logo' to={"/"}>
+                <Link className='logo' to={"/"} id="logo-btn">
                     <img src={logoImg} width={50} alt='' />
                 </Link>
                 <div className='links-holder'>
