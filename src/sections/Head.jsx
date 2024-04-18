@@ -8,7 +8,7 @@ const Head = () => {
         <section className='head--section'>
             <div className='heading'>
                 <h1>
-                    SOLANA IS KING
+                    <p>SOLANA IS KING</p>
                     <small className='fancy-text'>
                         ($<span>SIK</span>)
                     </small> 

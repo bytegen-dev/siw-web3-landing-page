@@ -135,6 +135,10 @@ button{
         letter-spacing: 4px;
         text-align: center;
 
+        p{
+            min-width: max-content;
+        }
+
         @media screen and (max-width: 1000px) {
             font-size: 50px;
         }
@@ -289,9 +293,15 @@ button{
                         bottom: -30px;
                         
                         @media screen and (max-width: 500px) {
+                            right: -20px;
+                            width: 60px;
+                        }
+                        
+                        @media screen and (max-width: 400px) {
                             // right: -15px;
+                            bottom: -40px;
                             bottom: -30px;
-                            width: 65px;
+                            width: 55px;
                         }
                     }
                 }
@@ -323,6 +333,11 @@ button{
                     font-family: "EzraLight", sans-serif;
                     position: relative;
                     padding-bottom: 60px;
+                    
+                    @media screen and (max-width: 600px) {
+                        padding-right: 15px;
+                        padding-bottom: 60px;
+                    }
                     
                     p{
                         line-height: 140%;
@@ -397,10 +412,11 @@ button{
                             @media screen and (max-width: 800px) {
                                 flex-direction: column !important;
                                 align-items: left;
-                                gap: 20px;
+                                gap: 10px;
 
                                 .details{
-                                    font-size: 16px !important;
+                                    font-size: 15px !important;
+                                    // width: 350px !important;
 
                                     &.x{
                                         &::after{

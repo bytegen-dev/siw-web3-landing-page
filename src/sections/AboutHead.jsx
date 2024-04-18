@@ -8,7 +8,10 @@ const AboutHead = () => {
         <section className='head--section'>
             <div className='heading'>
                 <h1>
-                    ABOUT SOLANA IS KING
+                    ABOUT
+                    <p>
+                    SOLANA IS KING
+                    </p>
                 </h1>
                 <img src={logoImg} alt='' width={70} />
             </div>
