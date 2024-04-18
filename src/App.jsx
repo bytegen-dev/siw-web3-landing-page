@@ -5,7 +5,7 @@ import Menu from './components/Menu'
 import Head from './sections/Head'
 import Tokenomics from './sections/Tokenomics'
 import Footer from './components/Footer'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import PageInDevelopment from './pages/PageInDevelopment'
@@ -34,6 +34,9 @@ function App() {
       },
     ],
   })
+
+  const location = useLocation()
+  const pathname = location?.pathname
 
   const appElementRef = useRef(null)
 
@@ -75,6 +78,12 @@ function App() {
     }
   },[appElementRef])
 
+  useLayoutEffect(()=>{
+    if(appElementRef){
+      appElementRef?.current?.scrollTo(0, 0)
+    }
+  },[pathname])
+
   return (
     <>
       {<Preloader showLonger={showPreloader} appState={appState} setAppState={setAppState} />}
@@ -86,6 +95,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<AboutUs />} />
           <Route path='/*' element={<PageInDevelopment />} />
         </Routes>
       </div>
