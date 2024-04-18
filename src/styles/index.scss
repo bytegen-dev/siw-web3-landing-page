@@ -158,7 +158,7 @@ button{
         }
 
         @media screen and (max-width: 400px) {
-            font-size: 35px;
+            font-size: 26px;
 
             small{
                 font-size: 20px !important;
@@ -166,7 +166,7 @@ button{
         }
 
         @media screen and (max-width: 380px) {
-            font-size: 35px;
+            font-size: 25px;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -193,6 +193,8 @@ button{
         @media screen and (max-width: 500px) {
             font-size: 25px;
         }
+
+        
     }
 
     h3{
@@ -285,6 +287,12 @@ button{
                         position: absolute;
                         right: -20px;
                         bottom: -30px;
+                        
+                        @media screen and (max-width: 500px) {
+                            // right: -15px;
+                            bottom: -30px;
+                            width: 65px;
+                        }
                     }
                 }
 
