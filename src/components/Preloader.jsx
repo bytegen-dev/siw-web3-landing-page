@@ -5,7 +5,7 @@ const Preloader = ({showLonger}) => {
   return (
     <>
         <div className='preloader' style={{
-          animationDelay: "1.2s"
+          animationDelay: showLonger ? "5s" : "1.5s"
         }}>
             <div className='icon'>
                 <img src={logoImg} alt='' width={100} />
