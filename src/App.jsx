@@ -3,6 +3,8 @@ import './styles/index.scss'
 import Header from './components/Header'
 import Menu from './components/Menu'
 import Head from './sections/Head'
+import Tokenomics from './sections/Tokenomics'
+import Footer from './components/Footer'
 
 function App() {
   const [appState, setAppState] = useState({
@@ -62,6 +64,8 @@ function App() {
 
         <div className='container'>
           <Head />
+          <Tokenomics />
+          <Footer />
         </div>
       </div>
     </>
