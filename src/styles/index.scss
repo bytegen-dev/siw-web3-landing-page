@@ -53,7 +53,7 @@ body{
 }
 
 ::-webkit-scrollbar{
-    width: 7px;
+    width: 0px;
 
     @media screen and (max-width: 660px) {
         width: 0px;
@@ -652,6 +652,112 @@ button{
         }
         
         
+    }
+}
+
+.preloader{
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-image: linear-gradient(#9949fb8a, #34ef9e97);
+    // opacity: 0;
+    // transform: scale(2);
+    transition: all 0.5s ease;
+    backdrop-filter: blur(50px);
+    animation: hide 0.3s ease forwards;
+    animation-delay: 3s;
+
+    @keyframes hide {
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+
+    p{
+        margin-top: 20px;
+        font-family: "EzraSemibold", sans-serif;
+        font-size: 30px;
+        background-image: linear-gradient(#34EF9D, #FFD549, #9849FB);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        position: fixed;
+        top: 20px;
+        left: 5vw;
+        color: #fff;
+        animation: slide-right 1s ease-in-out forwards;
+
+        @media screen and (max-width: 660px) {
+            font-size: 25px;
+            left: 30px;
+        }
+
+        @keyframes slide-right{
+            0%{
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+        }
+
+        span{
+            font-family: "AndroidAssassin", sans-serif;
+        }
+    }
+
+    .icon{
+        z-index: 100;
+        width: 150px;
+        height: 150px;
+        border-radius: 1000px;
+        border: 2px solid $greenish;
+        background-color: #fff1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        backdrop-filter: blur(100px);
+        animation: bounce 0.5s ease forwards infinite alternate;
+        // animation: bouncex 7s linear infinite;
+
+        @media screen and (max-width: 850px){
+            width: 130px;
+            height: 130px;
+        }
+
+        @media screen and (max-width: 660px){
+            width: 100px;
+            height: 100px;
+        }
+
+        @keyframes bounce {
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1.1);
+            }
+        }
+
+        // @keyframes bouncex {
+        //     0%{
+        //         rotate: -360deg;
+        //     }
+        //     100%{
+        //     }
+        // }
+
+        img{
+            width: 100%;
+        }
     }
 }
 

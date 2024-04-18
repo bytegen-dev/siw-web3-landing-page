@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import './styles/index.scss'
 import Header from './components/Header'
 import Menu from './components/Menu'
@@ -9,6 +9,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import PageInDevelopment from './pages/PageInDevelopment'
+import Preloader from './components/Preloader'
 
 function App() {
   const [appState, setAppState] = useState({
@@ -62,8 +63,21 @@ function App() {
     };
   }, [appElementRef]);
 
+  const [showPreloader, setShowPreloader] = useState(true)
+
+  useLayoutEffect(()=>{
+    const hasVisited = localStorage?.getItem("has-visited")
+    if(hasVisited){
+      setShowPreloader(false)
+    } else{
+      localStorage?.setItem("has-visited", true)
+      setShowPreloader(true)
+    }
+  },[appElementRef])
+
   return (
     <>
+      {<Preloader showLonger={showPreloader} appState={appState} setAppState={setAppState} />}
       <div className={`app ${appState?.showMenu ? "show-menu" : ""} ${appState?.pageScrolled ? "is-scrolled" : ""}`} ref={appElementRef}>
         
         <Header appState={appState} setAppState={setAppState} />
