@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaDiscord, FaGithub, FaTelegramPlane, FaTwitter } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { IoClose, IoOpenOutline } from "react-icons/io5";
 import { NavLink } from 'react-router-dom';
 
@@ -47,7 +48,7 @@ const Menu = ({appState, setAppState}) => {
                         <FaDiscord />
                     </a>
                     <a href="#" target="_blank">
-                        <FaTwitter />
+                        <FaXTwitter />
                     </a>
                     <a href="#" target="_blank">
                         <FaTelegramPlane />

@@ -1,6 +1,7 @@
 import React from 'react'
 import logoImg from "../assets/logo.png"
 import { FaDiscord, FaTelegram, FaTelegramPlane, FaTwitter } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 
 const Head = () => {
   return (
@@ -24,15 +25,15 @@ const Head = () => {
             
             <div className='token--overview'>
                 <div className='links-holder'>
-                    <a href="#" target="_blank">
+                    <a href="https://x.com/bytegen_dev" target="_blank">
                         <FaDiscord />
                         <p>discord</p>
                     </a>
-                    <a href="#" target="_blank">
-                        <FaTwitter />
+                    <a href="https://x.com/bytegen_dev" target="_blank">
+                        <FaXTwitter />
                         <p>twitter</p>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://x.com/bytegen_dev" target="_blank">
                         <FaTelegramPlane />
                         <p>telegram</p>
                     </a>
