@@ -17,12 +17,16 @@ function App() {
     isScrolled: false,
     links: [
       {
-          title: "SIK Art",
-          to: "/sik-art"
+          title: "Home",
+          to: "/"
       },
       {
           title: "About Us",
           to: "/about",
+      },
+      {
+          title: "NFTs",
+          to: "/sik-art"
       },
       {
           title: "Key Project",
